@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Regresar-->
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Sensores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let sensor of sensors">
+    <ion-card-header>
+      <ion-card-title class = "center">
+      <a>Salon: </a>{{sensor.Numero_salon}}
+      <hr color="blue" size=5 >
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class = "text">
+      <i id = "watch" class="fa-solid fa-stopwatch"></i>
+       /Hora: {{sensor.Temperatura}}  min
+    </ion-card-content>
+
+      <ion-card-content class = "text">
+        <i id = "covid" class="fa-solid fa-virus-covid"></i>
+        /Co2: {{sensor.Nivel_gas}} %
+      </ion-card-content>
+      
+      <ion-card-content class = "text">
+        <i id = "hot" class="fa-solid fa-temperature-full"></i>
+        /Indice de Calor: {{sensor.Indice_calor}} %
+      </ion-card-content>
+
+      <ion-card-content class = "text">
+        <i id = "wet" class="fa-solid fa-droplet"></i>
+         /Humedad: {{sensor.Humedad}}  %
+      </ion-card-content>
+
+      <ion-card-content class = "text">
+        <i id = "tem" class="fa-solid fa-temperature-high"></i>
+        /Temperatura: {{sensor.Temperatura}}  °C
+      </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

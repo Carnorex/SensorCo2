@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Regresar-->
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="login" (click)="cache()"></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title>Crear una cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header class = "center">
+      <ion-card-subtitle id = "sesionTitle">Crear Cuenta</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content class = "center">
+      <form>
+       <!--Username-->
+       <ion-item>
+        <ion-label position="stacked">Matricula</ion-label>
+        <ion-input #Username type="text" placeholder="0320128718" required
+         onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"  maxlength="10"></ion-input>
+      </ion-item>
+
+        <!--Nombre-->
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input #firstName type="text" placeholder="Carlos" required
+          onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Apellido</ion-label>
+          <ion-input  #lastName type="text" placeholder="Paniagua" required
+          onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"></ion-input>
+        </ion-item>
+
+          <!--Correo-->
+          <ion-item>
+            <ion-label position="stacked">Correo Electronico</ion-label>
+            <ion-input  #Email type="email" placeholder="Correo@outlook.com" required
+            pattern=".+@ut-tijuana\.edu.mx" size="30"></ion-input>
+          </ion-item>
+          
+        <!--Contraseña-->
+        <ion-item>
+          <ion-label position="stacked">Constraseña</ion-label>
+          <ion-input #Password type="password" placeholder="******" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Confirmar constraseña</ion-label>
+          <ion-input #confirmPassword type="password" placeholder="******" required></ion-input>
+        </ion-item>
+
+        <!--Buttons-->
+        <br>
+        <ion-button type="submit" expand="block" (click)="registrarse(Username, firstName, lastName, Email, Password, confirmPassword)">Crear Cuenta</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

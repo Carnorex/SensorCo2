@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Regresar-->
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <div id = "background"  color="primary">
+  <div id = "photo">
+    <img src="../assets/photos/NoPhoto.png" id = "photoImg">
+  </div>
+ </div>
+
+ <div id = "information">
+
+  <ion-card-header>
+    <ion-card-title>
+      Nombre
+    </ion-card-title>
+    <ion-card-content>
+     <a id = "Name01">
+      First and last name
+     </a> 
+    </ion-card-content>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-card-title>
+      Correo
+    </ion-card-title>
+    <ion-card-content>
+      <a id = "Email01">
+        Correo
+       </a> 
+    </ion-card-content>
+  </ion-card-content>
+
+  <ion-card-content>
+    <ion-card-title>
+      Matricula
+    </ion-card-title>
+    <ion-card-content>
+      <a id = "Username01">
+        Matricula
+       </a> 
+    </ion-card-content>
+  </ion-card-content>
+
+ </div>
+
+ <!--Botones-->
+ <div id = "buttons">
+
+  <ion-button color = "warning" href = "https://github.com/SantillanKG">
+    <ion-icon slot="icon-only" name="bug-outline"></ion-icon>
+  </ion-button>
+
+  <ion-button color = "secondary"  href = "update">
+    <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+  </ion-button>
+
+  <!--Salir de la cuenta-->
+  <ion-button color = "danger" href = "login" (click)="cache()">
+    <ion-icon slot="icon-only" name="log-out-outline">
+    </ion-icon>
+  </ion-button>
+  
+ </div>
+
+</ion-content>
+
+

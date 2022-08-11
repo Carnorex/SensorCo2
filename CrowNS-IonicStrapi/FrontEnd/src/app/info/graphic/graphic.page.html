@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Regresar-->
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Graficas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <br>
+      <ion-title class="center">
+        Sensores Principales
+        <hr color="primary" size=3>
+      </ion-title>
+    </ion-card-header>
+    <br>
+      <canvas id="myChart" width="400" height="400"></canvas>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <br>
+      <ion-title class="center">
+        Datos del dia
+        <hr color="secondary" size=3>
+      </ion-title>
+    </ion-card-header>
+    <canvas id="myChart02" width="400" height="400"></canvas>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <br>
+      <ion-title class="center">
+        Datos de la semana
+        <hr color="warning" size=3>
+      </ion-title>
+    </ion-card-header>
+    <canvas id="myChart03" width="400" height="400"></canvas>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <br>
+      <ion-title class="center">
+        Datos del Globales
+        <hr color="danger" size=3>
+      </ion-title>
+    </ion-card-header>
+    <canvas id="myChart04" width="400" height="400"></canvas>
+  </ion-card>
+
+</ion-content>

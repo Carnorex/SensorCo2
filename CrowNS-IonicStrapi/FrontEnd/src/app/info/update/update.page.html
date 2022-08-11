@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Regresar-->
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Actualizar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header class = "center">
+      <ion-icon name="settings-outline" id = "userIcon"></ion-icon>
+      <ion-card-subtitle id = "sesionTitle">Actualizar Informacion</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content class = "center">
+      <form>
+ 
+          <!--Nombre-->
+          <ion-item>
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input  id = "firstName" #firstName type="text" placeholder="Carlos" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Apellido</ion-label>
+            <ion-input id = "lastName" #lastName type="text" placeholder="Paniagua" required></ion-input>
+          </ion-item>
+
+            <!--Buttons-->
+            <br>
+            <ion-button expand="block" (click)="update(firstName, lastName)">Actualizar Informacion</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

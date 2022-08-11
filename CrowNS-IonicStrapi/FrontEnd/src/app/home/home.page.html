@@ -1,0 +1,132 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!--Menu-->
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" menu="first" (click)="onClick()"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Principal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <img  id="logo" src="assets/img/logo.png">
+      <ion-title id="textosuperior" size="large">CROW-NS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<!----------------------SLIDE IMAGES------------------------------>
+<ion-slides pager="true" :options="slideOpts">
+    <ion-slide>
+      <img style="width: 850px; height: 220px;" src="assets/img/salon.png">
+
+    </ion-slide>
+    <ion-slide >
+      <img style="width: 850px; height: 220px;" src="assets/img/carpinteria.png" >
+    </ion-slide>
+    <ion-slide>
+      <img style="width: 1250px; height: 220px;" src="assets/img/sensor.jpeg">
+    </ion-slide>
+  </ion-slides>
+
+<script>
+  
+  import { IonSlides, IonSlide } from '@ionic/vue';
+  import { defineComponent } from 'vue';
+  
+  export default defineComponent({
+    components: { IonSlides, IonSlide },
+    setup() {
+      // Optional parameters to pass to the swiper instance. See https://swiperjs.com/swiper-api for valid options.
+      const slideOpts = {
+        initialSlide: 1,
+        speed: 1
+      };
+      return { slideOpts }
+    }
+  });
+  </script>
+<!---------------------END SLIDE IMAGES--------------------------->
+
+<!--------------------------CARDS--------------------------------->
+  <ion-card id="HomeCard" class="HomeCard">
+    <ion-card-header>
+      <ion-card-subtitle>Acerca de nosotros</ion-card-subtitle>
+      <ion-card-title>¿Quienes somos?</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+ Somos una compañía de prevención de enfermedades de vías respiratorias en proceso de intentar ser una de las mejores de Tijuana,
+  contribuimos a un futuro preventivo ofreciendo productos accesibles para distintos tipos de espacios ayudamos a cuidarse a si mismos y a sus familias, más que cuidarte cada segundo que pasarías con nuestros productos, es una manera de prevenir y no curar enfermedades de vías respiratorias, queremos lograr ser el producto definitivo y exigido como norma de prevención en cualquier tipo de espacio cerrado nuestro objetivo siempre será advertir a todas las personas donde se encuentre nuestro producto al tener exceso de co2.
+    </ion-card-content>
+  </ion-card>
+  
+  <img id="imagen1" src="assets/img/dioxido.gif" onmouseover="this.width=220;this.height=170;" onmouseout="this.width=200;this.height=150;" width="200" height="150" />
+  
+  <ion-card id="HomeCard" class="HomeCard">
+    <ion-card-header>
+      <ion-card-subtitle>Productos</ion-card-subtitle>
+      <ion-card-title>¿Que ofrecemos?</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Crow NS es un producto que beneficiara aquellos lugares en los que podría ser posible un pico de transmisión
+       de enfermedades de vías respiratorias, con la aplicación de nuestro sistema, la cantidad de personas afectadas se podría reducir considerablemente.
+    </ion-card-content>
+  </ion-card>
+
+  <img id="imagen1" src="assets/img/co222.jpg" onmouseover="this.width=220;this.height=170;" onmouseout="this.width=200;this.height=150;" width="200" height="150" />
+
+  <ion-card id="HomeCard" class="HomeCard">
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title id="titulo1">MISION</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Crecer como empresa para mejorar nuestro producto con dedicación a la eficacia al prevenir la transmisión de enfermedades de vías respiratorias en un espacio definido, además queremos
+       ofrecer una experiencia de compromiso a los clientes de calidad en nuestros servicios y artículos.
+    </ion-card-content>
+  </ion-card>
+  
+  <img id="imagen1" src="assets/img/co22.jpg" onmouseover="this.width=220;this.height=170;" onmouseout="this.width=200;this.height=150;" width="200" height="150" />
+  
+  <ion-card id="HomeCard" class="HomeCard">
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>VISION</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Mejorar la calidad de nuestras piezas para así poder obtener más accesibilidad del producto tanto en nuestro estado como los de toda la república mexicana.
+      Convertirnos en una empresa que ya no sea una alternativa, si no como una exigencia para todos aquellos lugares que estén cerrados.      
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    
+      <ion-card-title id="contactotxt">CONTACTO</ion-card-title>
+   
+    <ion-item href="https://www.facebook.com/Crow-NS-104589855693969" class="ion-activated">
+      <img style="width: 10%; height: 65%;" src="assets/img/fb.png" >
+      <ion-label id="redestxt1"> Facebook</ion-label>
+    </ion-item>
+  
+    <ion-item href="https://web.whatsapp.com/" class="ion-activated">
+      <img id="wp" style="width: 14%; height: 84%;" src="assets/img/wp.png" >
+      <ion-label id="redestxt">(664) 675-65-83</ion-label>
+    </ion-item>
+  
+    <ion-item href="https://www.google.com/search?q=coronavirus&hl=es" class="ion-activated">
+      <ion-icon name="warning" slot="start"></ion-icon>
+      <ion-label id="covidtxt">COVID-19</ion-label>
+    </ion-item>
+  </ion-card>
+  <!---------------------END CARDS----------------------------->
+ 
+</ion-content>
+

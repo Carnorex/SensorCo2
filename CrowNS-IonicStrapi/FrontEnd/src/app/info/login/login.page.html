@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card>
+    <ion-card-header class = "center">
+      <ion-icon name="person-circle" id = "userIcon"></ion-icon>
+      <ion-card-subtitle id = "sesionTitle">Iniciar sesion</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content class = "center">
+      <form>
+        <!--correo-->
+        <ion-item>
+          <ion-label position="stacked">Correo Electronico</ion-label>
+          <ion-input  #Email type="email" placeholder="0230217881@outlook.com"></ion-input>
+        </ion-item>
+        <!--Contraseña-->
+        <ion-item>
+          <ion-label position="stacked">Constraseña</ion-label>
+          <ion-input #Password type="password" placeholder="******"></ion-input>
+        </ion-item>
+        <!--Buttons-->
+        <br>
+        <ion-button expand="block" (click)="confirmar(Email, Password)">Iniciar Sesion</ion-button>
+        <br>
+        ¿No tienes cuenta?
+        <ion-button expand="block" (click)="onClick()" href = "create-acount">Crear Cuenta</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

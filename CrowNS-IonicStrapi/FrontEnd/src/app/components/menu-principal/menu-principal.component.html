@@ -1,0 +1,58 @@
+<ion-menu side="start" menuId="first" contentId="main">
+
+  <ion-header id="header">
+
+    <ion-toolbar color="primary" id = "toolbar">
+      <ion-title id ="Name02">
+        Bienvenido
+      </ion-title>
+    </ion-toolbar>
+
+    <ion-card-content id = "Username02">
+      Matricula
+    </ion-card-content>
+
+    <ion-card-content id = "Email02">
+      Correo
+    </ion-card-content>
+
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="true">
+
+        <ion-item [routerLink]="['home']">
+          <ion-icon slot="start" name="home-outline" color="warning"></ion-icon>
+          Principal
+        </ion-item>
+
+        <ion-item [routerLink]="['sensors']">
+          <ion-icon slot="start" name="radio-outline" color="secondary"></ion-icon>
+          Sensores
+        </ion-item>
+
+        <ion-item [routerLink]="['graphic']">
+          <ion-icon slot="start" name="bar-chart-outline" color="tertiary"></ion-icon>
+          Graficas
+        </ion-item>
+
+        <ion-item [routerLink]="['backroom']">
+          <ion-icon slot="start" name="cube-outline" color="primary"></ion-icon>
+          Habitaciones
+        </ion-item>
+
+        <ion-item [routerLink]="['profile']">
+          <ion-icon slot="start" name="person-circle-outline" color="black"></ion-icon>
+          Usuario
+        </ion-item>
+
+        <ion-item [routerLink]="['information']">
+          <ion-icon slot="start" name="build-outline" color="success"></ion-icon>
+          Informacion
+        </ion-item>
+
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

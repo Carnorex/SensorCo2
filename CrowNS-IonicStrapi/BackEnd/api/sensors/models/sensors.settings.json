@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensors",
+  "info": {
+    "name": "Sensors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Numero_salon": {
+      "type": "biginteger"
+    },
+    "Nivel_gas": {
+      "type": "float"
+    },
+    "Humedad": {
+      "type": "float"
+    },
+    "Temperatura": {
+      "type": "float"
+    },
+    "Indice_calor": {
+      "type": "float"
+    }
+  }
+}

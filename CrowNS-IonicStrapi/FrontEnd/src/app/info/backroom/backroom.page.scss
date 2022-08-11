@@ -1,0 +1,16 @@
+#svgCard {
+    position: relative;
+    float: center;
+    width: calc(100% - 42px);
+    margin: 20px;
+    //background: #FFF;
+    //border: 1px solid #DDD;
+  }
+  #svgCard svg {
+    width: auto;
+    height: auto;
+  }
+  .center
+{
+    text-align: center;
+}
